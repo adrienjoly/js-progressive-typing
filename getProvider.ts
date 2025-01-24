@@ -8,6 +8,7 @@ export function getProvider(speciality: Speciality): { name: string, phoneNumber
             return { name: 'McSmash', phoneNumber: '123-242-4399' };   
         default:
             // this should never happen, if speciality's value satisfies its type
+            speciality satisfies never;
             throw new Error('unknown speciality');
     }
 }
