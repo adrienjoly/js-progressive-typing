@@ -7,7 +7,7 @@ import { sendOrder } from './sendOrder.ts';
 export async function dispatchOrder(speciality: Speciality, customerAddress: string) {
     const provider = getProvider(speciality);
     // if (!provider) throw new Error(`No provider found for ${speciality}`);
-    sendOrder(provider.phoneNumber, customerAddress);
+    await sendOrder(provider.phoneNumber, customerAddress);
 }
 
 // sample call
