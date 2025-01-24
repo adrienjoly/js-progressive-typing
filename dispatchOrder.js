@@ -1,3 +1,5 @@
+// @ts-check
+
 import { getProvider } from './getProvider.js';
 import { sendOrder } from './sendOrder.js';
 
