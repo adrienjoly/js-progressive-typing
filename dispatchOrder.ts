@@ -1,5 +1,5 @@
-import { getProvider } from './getProvider.js';
-import { sendOrder } from './sendOrder.js';
+import { getProvider } from './getProvider.ts';
+import { sendOrder } from './sendOrder.ts';
 
 export async function dispatchOrder(speciality, customerAddress) {
     const provider = getProvider(speciality);
