@@ -1,3 +1,9 @@
+// @ts-check
+
+/**
+ * @param {string} phoneNumber 
+ * @param {string} customerAddress 
+ */
 export function sendOrder(phoneNumber, customerAddress) {
     console.log(`Order sent to ${phoneNumber} at ${customerAddress}`);
 }
