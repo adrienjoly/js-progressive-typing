@@ -1,5 +1,6 @@
 /**
  * @param {'pizza' | 'burger'} speciality 
+ * @returns {{ name: string, phoneNumber: string }}
  */
 export function getProvider(speciality) {
     switch (speciality) {
