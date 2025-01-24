@@ -3,6 +3,8 @@
 import { getProvider } from './getProvider.js';
 import { sendOrder } from './sendOrder.js';
 
+// TODO: validate type of speciality and customerAddress from API request, e.g. using Zod
+
 /**
  * @param {import('./contract.ts').Speciality} speciality 
  * @param {string} customerAddress 

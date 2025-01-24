@@ -2,7 +2,9 @@ import type { Speciality } from './contract.ts';
 import { getProvider } from './getProvider.ts';
 import { sendOrder } from './sendOrder.ts';
 
-export async function dispatchOrder(speciality: Speciality, customerAddress) {
+// TODO: validate type of speciality and customerAddress from API request, e.g. using Zod
+
+export async function dispatchOrder(speciality: Speciality, customerAddress: string) {
     const provider = getProvider(speciality);
     // if (!provider) throw new Error(`No provider found for ${speciality}`);
     sendOrder(provider.phoneNumber, customerAddress);
