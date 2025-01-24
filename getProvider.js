@@ -1,3 +1,5 @@
+// @ts-check
+
 /**
  * @param {'pizza' | 'burger'} speciality 
  * @returns {{ name: string, phoneNumber: string }}
