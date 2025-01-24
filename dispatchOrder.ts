@@ -3,6 +3,7 @@ import { sendOrder } from './sendOrder.ts';
 
 export async function dispatchOrder(speciality, customerAddress) {
     const provider = getProvider(speciality);
+    if (!provider) throw new Error(`No provider found for ${speciality}`);
     sendOrder(provider.phoneNumber, customerAddress);
 }
 
