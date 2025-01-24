@@ -5,6 +5,7 @@ export function getProvider(speciality: 'pizza' | 'burger'): { name: string, pho
         case 'burger':
             return { name: 'McSmash', phoneNumber: '123-242-4399' };   
         default:
-            console.error('unknown speciality');
+            // this should never happen, if speciality's value satisfies its type
+            throw new Error('unknown speciality');
     }
 }
