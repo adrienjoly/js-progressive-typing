@@ -1,3 +1,6 @@
+/**
+ * @param {'pizza' | 'burger'} speciality 
+ */
 export function getProvider(speciality) {
     switch (speciality) {
         case 'pizza':
