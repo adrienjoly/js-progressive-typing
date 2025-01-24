@@ -1,6 +1,7 @@
 {
   "type": "module",
   "scripts": {
+    "typecheck": "tsc --project tsconfig.json",
     "lint": "eslint **/*.ts"
   },
   "devDependencies": {
