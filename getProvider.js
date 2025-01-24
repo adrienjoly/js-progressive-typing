@@ -1,7 +1,7 @@
 // @ts-check
 
 /**
- * @param {'pizza' | 'burger'} speciality 
+ * @param {import("./contract.ts").Speciality} speciality 
  * @returns {{ name: string, phoneNumber: string }}
  */
 export function getProvider(speciality) {

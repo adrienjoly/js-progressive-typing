@@ -4,7 +4,7 @@ import { getProvider } from './getProvider.js';
 import { sendOrder } from './sendOrder.js';
 
 /**
- * @param {'pizza' | 'burger'} speciality 
+ * @param {import('./contract.ts').Speciality} speciality 
  * @param {string} customerAddress 
  */
 export async function dispatchOrder(speciality, customerAddress) {

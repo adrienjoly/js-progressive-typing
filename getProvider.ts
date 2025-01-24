@@ -1,4 +1,6 @@
-export function getProvider(speciality: 'pizza' | 'burger'): { name: string, phoneNumber: string } {
+import type { Speciality } from "./contract.ts";
+
+export function getProvider(speciality: Speciality): { name: string, phoneNumber: string } {
     switch (speciality) {
         case 'pizza':
             return { name: 'Pizza Capri', phoneNumber: '312-949-1311' };
