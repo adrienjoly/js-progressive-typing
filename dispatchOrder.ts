@@ -1,9 +1,9 @@
 import { getProvider } from './getProvider.ts';
 import { sendOrder } from './sendOrder.ts';
 
-export async function dispatchOrder(speciality, customerAddress) {
+export async function dispatchOrder(speciality: 'pizza' | 'burger', customerAddress) {
     const provider = getProvider(speciality);
-    if (!provider) throw new Error(`No provider found for ${speciality}`);
+    // if (!provider) throw new Error(`No provider found for ${speciality}`);
     sendOrder(provider.phoneNumber, customerAddress);
 }
 

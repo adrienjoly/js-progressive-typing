@@ -3,9 +3,13 @@
 import { getProvider } from './getProvider.js';
 import { sendOrder } from './sendOrder.js';
 
+/**
+ * @param {'pizza' | 'burger'} speciality 
+ * @param {string} customerAddress 
+ */
 export async function dispatchOrder(speciality, customerAddress) {
     const provider = getProvider(speciality);
-    if (!provider) throw new Error(`No provider found for ${speciality}`);
+    // if (!provider) throw new Error(`No provider found for ${speciality}`);
     sendOrder(provider.phoneNumber, customerAddress);
 }
 
