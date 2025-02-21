@@ -39,18 +39,19 @@ Code, WIP: [adrienjoly/js-progressive-typing: code for an upcoming meetup talk](
     - ...et vous pouvez toujours créer des types dans des fichiers TS !
     - `npx tsc --noEmit --allowJS **/*.js` ou  `npx tsc --project tsconfig.json`
 - exemples de patterns (en TS+TSDoc)
-    - [ ] settings typescript importants, dans tsconfig.json ou [jsconfig.json](https://code.visualstudio.com/docs/languages/jsconfig)
+    - [x] exhaustive match dans switch
+    - [x] bases: `any` VS `unknown`
+    - [x] settings typescript importants, dans tsconfig.json ou [jsconfig.json](https://code.visualstudio.com/docs/languages/jsconfig)
         - `strict` => `noImplicitAny`, `strictNullChecks`, `strictFunctionTypes`
+        - [noUncheckedIndexedAccess](https://www.typescriptlang.org/tsconfig/#noUncheckedIndexedAccess)
         - `noImplicitThis`
         - `alwaysStrict` (=> `use strict`)
         - optim: `skipLibCheck`, `exclude` node_modules et build
         - et cf recoms de https://gils-blog.tayar.org/posts/jsdoc-typings-all-the-benefits-none-of-the-drawbacks/
         - et cheatsheet: [JSDoc as an alternative TypeScript syntax](https://alexharri.com/blog/jsdoc-as-an-alternative-typescript-syntax)
-    - [ ] bases: `any` VS `unknown`
     - [ ] cas où un appel peut retourner `null` ou `undefined`, ex: `Cannot destructure property 'html' of 'undefined'`
-    - [ ] assertions de types: declaration VS cast VS hard cast VS satisfies
-    - [ ] type guards, cf [typescript-type-guard-function-using-jsdoc.js](https://gist.github.com/adrienjoly/779abbfd705f3b3a963af395cfa4a9b2) et [Type Guards in Javascript Using JSDoc Comments - goulet.dev](https://goulet.dev/posts/type-guard-in-jsdoc/)
-    - [x] exhaustive match dans switch
+    - [x] assertions de types: declaration VS cast VS hard cast VS satisfies
+    - [x] type guards, cf [typescript-type-guard-function-using-jsdoc.js](https://gist.github.com/adrienjoly/779abbfd705f3b3a963af395cfa4a9b2) et [Type Guards in Javascript Using JSDoc Comments - goulet.dev](https://goulet.dev/posts/type-guard-in-jsdoc/)
 - pour aller plus loin
     - survol de protections supplémentaires fournies par ESlint et ses plugings, ex: `@typescript-eslint/no-floating-promises`, `jsdoc/valid-types` + `overrides` pour migrer progressivement
     - et, pour aller plus loin: validation avec zod, cf [Types at the edges of your system | Understand Legacy Code](https://understandlegacycode.com/typing-the-edges/)
