@@ -71,3 +71,28 @@ Can you generate the opening credits of the "X Files" tv show, will the followin
 - government denies knowledge --> ReferenceError: user is not defined
 - Gillian Anderson --> ReferenceError: user is not defined
 - created by chris carter --> "Let's add a try-catch block..."
+
+## App sequence diagram
+
+Made with https://sequencediagram.org/:
+
+```mermaid
+title An app to order food
+
+participant BFF API
+participant OrdersAPI
+participant FoodProviders
+participant DeliveryAPI
+
+BFF API->OrdersAPI:dispatchOrder('pizza', '168 rue S. Maur')
+activate OrdersAPI
+OrdersAPI->FoodProviders:getProvider('pizza')
+activate FoodProviders
+OrdersAPI<--FoodProviders:provider
+deactivate FoodProviders
+OrdersAPI->DeliveryAPI:sendOrder(provider.phoneNumber, customerAddress);
+activate DeliveryAPI
+OrdersAPI<--DeliveryAPI:order
+deactivate DeliveryAPI
+BFF API<--OrdersAPI:orderConfirmation
+```
